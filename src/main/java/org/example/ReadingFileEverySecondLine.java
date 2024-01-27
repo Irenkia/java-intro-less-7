@@ -6,7 +6,6 @@ import java.nio.file.Path;
 
 public class ReadingFileEverySecondLine {
     public static void readFileEverySecondLine(String filePath) throws IOException {
-//        String pathToFile = file.getPath();
         String text = Files.readString(Path.of(filePath));
         String[] words = text.split("\n");
         for (int i = 0; i < words.length; i++) {

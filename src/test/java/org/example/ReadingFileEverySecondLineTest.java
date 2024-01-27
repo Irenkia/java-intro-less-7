@@ -10,6 +10,7 @@ public class ReadingFileEverySecondLineTest {
     public void mustReadingFromFile() throws IOException {
         //given
         File newFile = new File("src/test/resources/fileReadEverySecondLine.txt");
+        String filePath = newFile.getPath();
 
         //when
         try {
@@ -23,6 +24,6 @@ public class ReadingFileEverySecondLineTest {
         }
 
         //then
-        ReadingFileEverySecondLine.readFileEverySecondLine(newFile);
+        ReadingFileEverySecondLine.readFileEverySecondLine(filePath);
     }
 }

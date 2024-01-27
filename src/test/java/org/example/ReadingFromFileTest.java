@@ -10,12 +10,13 @@ public class ReadingFromFileTest {
     @Test
     public void mustReadingFromFile() throws IOException {
         //given
-        File newFile = new File("src/test/resources/fileForRead.txt");
+        File file = new File("src/test/resources/fileForRead.txt");
+        String pathToFile = file.getPath();
 
         //when
         try {
-            if (!newFile.exists()) {
-                newFile.createNewFile();
+            if (!file.exists()) {
+                file.createNewFile();
                 System.out.println("File has been created.");
             }
         } catch (IOException e) {
@@ -24,6 +25,6 @@ public class ReadingFromFileTest {
         }
 
         //then
-        ReadingFromFile.printTextFromFile(newFile);
+        ReadingFromFile.printTextFromFile(pathToFile);
     }
 }

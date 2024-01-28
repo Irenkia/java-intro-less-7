@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+
 public class TakeSquareRootTest {
     @Test
     public void mustTakeSquareRootFromPositiveNumber() throws Exception {
@@ -25,7 +27,7 @@ public class TakeSquareRootTest {
         //when
         try {
             TakeSquareRoot.getSquareRoot(number);
-        } catch (IndexOutOfBoundsException e) {
+        } catch (Exception e) {
             exceptionThrown = false;
         }
 

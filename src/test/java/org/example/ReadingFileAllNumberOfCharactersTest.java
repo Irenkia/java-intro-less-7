@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ReadingFileAllNumberOfCharactersTest {
     @Test
-    public void mustReadingFromFileAllNumberOfCharacters() throws IOException {
+    public void mustReadingFromFileAllNumberOfCharacters() {
         //given
         String filePath = "src/main/resources/fileReadAllNumberOfCharacters.txt";
         File newFile = new File(filePath);

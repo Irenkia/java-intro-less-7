@@ -9,8 +9,12 @@ import static java.lang.Character.isDigit;
 import static java.lang.Character.isJavaLetter;
 
 public class ReadingFileAllNumberOfCharacters {
-    public static void printAllNumberOfCharacters(String filePat) throws IOException {
-        String text = Files.readString(Path.of(filePat));
-        System.out.println("In file contained " + text.length() + " characters");
+    public static void printAllNumberOfCharacters(String filePat) {
+        try {
+            String text = Files.readString(Path.of(filePat));
+            System.out.println("In file contained " + text.length() + " characters");
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
     }
 }

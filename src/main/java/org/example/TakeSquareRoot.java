@@ -9,8 +9,6 @@ public class TakeSquareRoot {
             }
         }catch (IllegalArgumentException e){
             e.printStackTrace();
-        }finally {
-            number = 0.0;
         }
         return Math.sqrt(number);
     }

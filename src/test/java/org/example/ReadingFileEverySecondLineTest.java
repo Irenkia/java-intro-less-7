@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ReadingFileEverySecondLineTest {
     @Test
-    public void mustReadingFromFileEverySecondLine() throws IOException {
+    public void mustReadingFromFileEverySecondLine() {
         //given
         File newFile = new File("src/test/resources/fileReadEverySecondLine.txt");
         String filePath = newFile.getPath();

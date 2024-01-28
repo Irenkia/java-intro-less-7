@@ -23,7 +23,7 @@ public class ReadingFileSearchForWordTest {
     }
 
     @Test
-    public void mustReadingFromFileSearchForWordIsExists() throws IOException {
+    public void mustReadingFromFileSearchForWordIsExists() {
         //given
         createFile();
         String word = "Java";
@@ -36,7 +36,7 @@ public class ReadingFileSearchForWordTest {
     }
 
     @Test
-    public void mustReadingFromFileSearchForWordNoExists() throws IOException {
+    public void mustReadingFromFileSearchForWordNoExists() {
         //given
         String word = "JavaScript";
 

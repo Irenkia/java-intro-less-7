@@ -7,9 +7,13 @@ import java.nio.file.Path;
 
 public class ReadingFromFile {
 
-    public static void printTextFromFile(String filePath) throws IOException {
-        String text = Files.readString(Path.of(filePath));
-        System.out.println(text);
+    public static void printTextFromFile(String filePath) {
+        try {
+            String text = Files.readString(Path.of(filePath));
+            System.out.println(text);
+        } catch (IOException exception) {
+            exception.printStackTrace();
+        }
     }
 
 }

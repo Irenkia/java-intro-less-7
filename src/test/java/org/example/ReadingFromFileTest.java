@@ -8,7 +8,7 @@ import java.io.IOException;
 public class ReadingFromFileTest {
 
     @Test
-    public void mustReadingFromFilePrintText() throws IOException {
+    public void mustReadingFromFilePrintText() {
         //given
         File file = new File("src/test/resources/fileForRead.txt");
         String pathToFile = file.getPath();

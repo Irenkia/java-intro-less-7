@@ -8,7 +8,7 @@ import java.io.IOException;
 public class ReverseContentReadingFileTest {
 
     @Test
-    public void mustPrintReverseContentFromFile() throws IOException {
+    public void mustPrintReverseContentFromFile() {
         //given
         File file = new File("src/test/resources/fileReadAllNumberOfCharacters.txt");
         String path = file.getPath();

@@ -20,7 +20,7 @@ public class FileReadReplaceLettersWithCapitalsTest {
     }
 
     @Test
-    public void mustReadingFromFilePrintTextCapitalsLetters() throws IOException {
+    public void mustReadingFromFilePrintTextCapitalsLetters() {
         //given
         String filePathToRead = "src/test/resources/filePrintTextCapitalsLetters.txt";
         createFile(filePathToRead);
@@ -33,7 +33,7 @@ public class FileReadReplaceLettersWithCapitalsTest {
     }
 
     @Test
-    public void mustWriteTextCapitalsLettersToFile() throws IOException {
+    public void mustWriteTextCapitalsLettersToFile() {
         //given
         String filePathToWrite = "src/test/resources/output.txt";
         createFile(filePathToWrite);

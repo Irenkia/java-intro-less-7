@@ -3,8 +3,6 @@ package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static java.lang.Double.NaN;
-
 public class TakeSquareRootTest {
     @Test
     public void mustTakeSquareRootFromPositiveNumber() throws Exception {
@@ -25,7 +23,6 @@ public class TakeSquareRootTest {
         boolean exceptionThrown = true;
 
         //when
-//        double result = TakeSquareRoot.getSquareRoot(number);
         try {
             TakeSquareRoot.getSquareRoot(number);
         } catch (IndexOutOfBoundsException e) {

@@ -27,7 +27,7 @@ public class TakeSquareRootTest {
         //when
         try {
             TakeSquareRoot.getSquareRoot(number);
-        } catch (Exception e) {
+        } catch (IllegalArgumentException e) {
             exceptionThrown = false;
         }
 

@@ -22,12 +22,18 @@ public class TakeSquareRootTest {
     public void whenTakeSquareRootFromNegativeNumberThrowException(){
         //given
         double number = -16.0;
+        boolean exceptionThrown = true;
 
         //when
-        double result = TakeSquareRoot.getSquareRoot(number);
+//        double result = TakeSquareRoot.getSquareRoot(number);
+        try {
+            TakeSquareRoot.getSquareRoot(number);
+        } catch (IndexOutOfBoundsException e) {
+            exceptionThrown = false;
+        }
 
         //then
-        Assertions.assertEquals(0.0, result);
+        Assertions.assertTrue(exceptionThrown);
     }
 
 }

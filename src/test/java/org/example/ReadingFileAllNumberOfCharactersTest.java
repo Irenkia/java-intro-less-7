@@ -9,7 +9,8 @@ public class ReadingFileAllNumberOfCharactersTest {
     @Test
     public void mustReadingFromFileAllNumberOfCharacters() throws IOException {
         //given
-        File newFile = new File("src/main/resources/fileReadAllNumberOfCharacters.txt");
+        String filePath = "src/main/resources/fileReadAllNumberOfCharacters.txt";
+        File newFile = new File(filePath);
 
         //when
         try {
@@ -23,6 +24,6 @@ public class ReadingFileAllNumberOfCharactersTest {
         }
 
         //then
-        ReadingFileAllNumberOfCharacters.printAllNumberOfCharacters(newFile);
+        ReadingFileAllNumberOfCharacters.printAllNumberOfCharacters(filePath);
     }
 }

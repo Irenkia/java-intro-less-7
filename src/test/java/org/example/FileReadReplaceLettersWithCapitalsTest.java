@@ -33,6 +33,19 @@ public class FileReadReplaceLettersWithCapitalsTest {
     }
 
     @Test
+    public void whenReadingFromEmptyFile() {
+        //given
+        String filePathToRead = "src/test/resources/fileEmpty.txt";
+        createFile(filePathToRead);
+
+        //when
+        String newText = FileReadReplaceLettersWithCapitals.readTextFromFile(filePathToRead);
+
+        //then
+        System.out.println(newText);
+    }
+
+    @Test
     public void mustWriteTextCapitalsLettersToFile() {
         //given
         String filePathToWrite = "src/test/resources/output.txt";

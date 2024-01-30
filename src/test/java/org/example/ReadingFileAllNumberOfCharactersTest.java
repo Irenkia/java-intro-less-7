@@ -26,4 +26,5 @@ public class ReadingFileAllNumberOfCharactersTest {
         //then
         ReadingFileAllNumberOfCharacters.printAllNumberOfCharacters(filePath);
     }
+
 }

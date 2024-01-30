@@ -7,8 +7,9 @@ import java.nio.file.Paths;
 
 public class FileReadReplaceLettersWithCapitals {
     public static String readTextFromFile(String filePath) {
+        String checkedPath = checkParameterForZero(filePath);
         try {
-            String text = Files.readString(Path.of(filePath)).toUpperCase();
+            String text = Files.readString(Path.of(checkedPath)).toUpperCase();
             return text;
         } catch (IOException exception) {
             exception.printStackTrace();
@@ -23,5 +24,12 @@ public class FileReadReplaceLettersWithCapitals {
         } catch (IOException exception) {
             exception.printStackTrace();
         }
+    }
+
+    public static String checkParameterForZero(String filePath){
+        if(filePath == null){
+            filePath = "";
+        }
+        return filePath;
     }
 }

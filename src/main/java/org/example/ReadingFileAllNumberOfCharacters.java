@@ -7,9 +7,9 @@ import java.nio.file.Path;
 public class ReadingFileAllNumberOfCharacters {
 
     public static void printAllNumberOfCharacters(String filePath) {
-        String newPath = checkParameterForZero(filePath);
+        String checkedPath = checkParameterForZero(filePath);
         try {
-            String text = Files.readString(Path.of(newPath));
+            String text = Files.readString(Path.of(checkedPath));
             System.out.println("In file contained " + text.length() + " characters");
         } catch (IOException exception) {
             exception.printStackTrace();

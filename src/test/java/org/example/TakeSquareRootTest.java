@@ -22,13 +22,13 @@ public class TakeSquareRootTest {
     public void whenTakeSquareRootFromNegativeNumberThrowException(){
         //given
         double number = -16.0;
-        boolean exceptionThrown = true;
+        boolean exceptionThrown = false;
 
         //when
         try {
             TakeSquareRoot.getSquareRoot(number);
         } catch (IllegalArgumentException e) {
-            exceptionThrown = false;
+            exceptionThrown = true;
         }
 
         //then

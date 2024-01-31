@@ -20,4 +20,21 @@ public class CheckDivisionByThreeTest {
         //then
         Assertions.assertTrue(exceptionThrown);
     }
+
+    @Test
+    public void mustValidateDivisionByThree_whereParameterNullThrowException_thenAssertionSucceeds() {
+        //given
+        int[] arr = null;
+        boolean exceptionThrown = true;
+
+        //when
+        try {
+            CheckDivisionByThree.validate(arr);
+        } catch (IllegalArgumentException ex) {
+            exceptionThrown = false;
+        }
+
+        //then
+        Assertions.assertTrue(exceptionThrown);
+    }
 }

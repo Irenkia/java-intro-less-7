@@ -6,12 +6,7 @@ public class CheckDivisionByThree {
         if(checkParameterForZero(values)){
             for (int i = 0; i < values.length; i++){
                 try {
-                    if(values[i] % 3 != 0){
-                        System.out.println("Wrong value \"" + values[i] + "\"  not divisible by 3");
-                        throw new IllegalArgumentException();
-                    }else {
-                        System.out.println("Value \"" + values[i] + "\"  divisible by 3");
-                    }
+                    checkIfDivisible(values[i]);
                 }catch (IllegalArgumentException e){
                     e.getMessage();
                 }
@@ -24,5 +19,15 @@ public class CheckDivisionByThree {
             return false;
         }
         return true;
+    }
+
+    public static boolean checkIfDivisible(int number){
+        if(number % 3 != 0){
+            System.out.println("Wrong value \"" + number + "\"  not divisible by 3");
+            throw new IllegalArgumentException();
+        }else {
+            System.out.println("Value \"" + number + "\"  divisible by 3");
+            return true;
+        }
     }
 }
